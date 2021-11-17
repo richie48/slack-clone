@@ -1,15 +1,19 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import Home from '../src/components/Home'
+import Header from '../src/components/Header'
 
 function App() {
   return (
     <div>
     <Router>
       <>
-        <Routes>
-          <Route path="/"><React.Fragment>This is the homepage</React.Fragment></Route>
-        </Routes>
+      <Routes>
+          <Route exact path="/" element={<Home/>} exact>
+            <Header/>
+          </Route>
+      </Routes>
       </>
     </Router>
     </div>
