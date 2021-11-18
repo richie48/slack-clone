@@ -4,16 +4,18 @@ body {
 
 .header {
   background-color: #da70d6;
-  min-height: 6vh;
+  min-height: 7vh;
   display: flex;
   flex-direction: row;
   white-space: nowrap;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 .header h1 {
-  color: red;
+  color: white;
   font-size: small;
 }
 
@@ -28,7 +30,28 @@ body {
 .header-search {
   align-items: center;
   display: flex;
+  height: 28px;
   flex-direction: row;
+  border-radius: 8px;
+  background-color: blue;
+  border-color: white;
+  padding: 0 100px;
+  position: relative;
+}
+
+.combine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-field {
+  text-align: center;
+}
+
+.searchicon {
+  position: absolute;
+  right: 0;
 }
 
 .App {
@@ -37,9 +60,22 @@ body {
 
 .header-avatar,
 .clock-icon {
-  width: 25px;
-  height: 25px;
-  color: #343434;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.header-avatar,
+.clock-icon:hover {
+  opacity: 0.5;
+}
+
+.header-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .App-header {

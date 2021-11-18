@@ -1,10 +1,10 @@
-
+import {Avatar} from "@material-ui/core";
 
 //Would pass the image as props.
 function HeaderAvatar() {
     return (
-        <div className='headeravatar'>
-            <img alt='not seen' />
+        <div className='header-avatar'>
+            <Avatar alt="not seen" />
         </div>
     )
 }

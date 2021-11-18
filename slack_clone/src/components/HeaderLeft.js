@@ -1,11 +1,10 @@
 import HeaderAvatar from "./HeaderAvatar"
-import {ClockIcon} from '@heroicons/react/outline'
+// import {Avatar} from "@material-ui/core";
 
 function HeaderLeft() {
     return (
         <div className='header-left'>
             <HeaderAvatar/>
-            <div className='clock-icon'> <ClockIcon /> </div>
         </div>
     )
 }
