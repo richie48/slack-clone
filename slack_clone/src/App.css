@@ -33,8 +33,9 @@ body {
   height: 28px;
   flex-direction: row;
   border-radius: 8px;
-  background-color: blue;
+  background-color: #da70d6;
   border-color: white;
+  --tw-border-opacity: 1;
   padding: 0 100px;
   position: relative;
 }
@@ -45,12 +46,16 @@ body {
   align-items: center;
 }
 
-.search-field {
+.header-search input {
   text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: 0;
 }
 
 .searchicon {
   position: absolute;
+  color: white;
   right: 0;
 }
 
@@ -76,14 +81,4 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
 }
