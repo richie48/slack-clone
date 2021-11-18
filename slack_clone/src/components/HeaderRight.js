@@ -1,6 +1,6 @@
 function HeaderRight() {
     return (
-        <div>
+        <div className='header-right'>
             rightheader
         </div>
     )

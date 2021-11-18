@@ -3,16 +3,43 @@ body {
 }
 
 .header {
-  background-color: #61dafb;
+  background-color: #da70d6;
   min-height: 6vh;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .header h1 {
   color: red;
   font-size: small;
 }
 
+.header-left {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-right {
+  margin-right: 20px;
+}
+.header-search {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
 .App {
   text-align: center;
+}
+
+.header-avatar,
+.clock-icon {
+  width: 25px;
+  height: 25px;
+  color: #343434;
 }
 
 .App-header {

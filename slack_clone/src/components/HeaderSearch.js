@@ -1,6 +1,6 @@
 function HeaderSearch() {
     return (
-        <div>
+        <div className='header-search'>
             HeaderSearch
         </div>
     )
