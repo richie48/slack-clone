@@ -3,7 +3,7 @@ body {
 }
 
 .header {
-  background-color: #da70d6;
+  background-color: #421f44;
   min-height: 7vh;
   display: flex;
   flex-direction: row;
@@ -24,16 +24,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.header-right {
-  margin-right: 20px;
-}
+
 .header-search {
   align-items: center;
   display: flex;
   height: 28px;
   flex-direction: row;
   border-radius: 8px;
-  background-color: #da70d6;
+  background-color: #421f44;
   border-color: white;
   --tw-border-opacity: 1;
   padding: 0 100px;
@@ -51,6 +49,7 @@ body {
   background-color: transparent;
   border: none;
   outline: 0;
+  color: white;
 }
 
 .searchicon {
@@ -64,7 +63,8 @@ body {
 }
 
 .header-avatar,
-.clock-icon {
+.clock-icon,
+.header-right {
   width: 30px;
   height: 30px;
   margin-right: 20px;
@@ -72,7 +72,7 @@ body {
   color: white;
 }
 
-.header-avatar,
+.header-avatar:hover,
 .clock-icon:hover {
   opacity: 0.5;
 }
@@ -81,4 +81,36 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.homepage h1 {
+  color: black;
+  cursor: pointer;
+}
+.app-home {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  height: 90vh;
+  margin-top: 7vh;
+  max-width: 250px;
+  background-color: #421f44;
+  color: white;
+}
+
+.app-routes {
+  margin-top: 7vh;
+}
+
+.sidebar-header-div {
+  height: 10px;
+}
+
+.sidebar-header {
+  margin-top: 30px;
+}
+.sidebar-header-split {
+  justify-content: space-between;
 }
