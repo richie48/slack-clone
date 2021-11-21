@@ -1,13 +1,20 @@
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
 import CreateIcon from '@material-ui/icons/Create'
+import { makeStyles} from "@mui/styles";
 
-function sideBarHeader() {
+//styling materialui icons
+const useStyles = makeStyles({
+    iconroot: { color: "green" }  
+});
+
+function SideBarHeader() {
+    const classes=useStyles();
     return (
         <div className='sidebar-header'>
-            <div><h3>Richie's Slack</h3></div>
-            <div className='name-line'><div><h4><FiberManualRecordIcon/> Odior Richard </h4></div><div className='create-icon'><CreateIcon/></div></div>
+            <div className='info'><h3>Richie's Slack</h3><h4><FiberManualRecordIcon className={classes.iconroot} /> Odior Richard </h4></div>
+            <div className='create-icon'><CreateIcon/></div>
         </div>
     )
 }
 
-export default sideBarHeader
+export default SideBarHeader

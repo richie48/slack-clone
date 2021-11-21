@@ -1,4 +1,4 @@
-import SideBarHeader from  './sideBarHeader'
+import SideBarHeader from  './SideBarHeader'
 
 function SideBar() {
     return (

@@ -92,6 +92,10 @@ body {
   flex-direction: column;
 }
 
+.app-routes {
+  margin-top: 7vh;
+}
+
 .sidebar {
   height: 90vh;
   margin-top: 7vh;
@@ -99,26 +103,16 @@ body {
   background-color: #421f44;
   color: white;
 }
-
-.app-routes {
-  margin-top: 7vh;
-}
-
-.sidebar-header-div {
-  height: 10px;
-}
-
 .sidebar-header {
   margin-top: 30px;
   margin-left: 10px;
-}
-
-.name-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+.sidebar-header-div {
+  height: 10px;
+}
 .create-icon {
   margin-right: 20px;
   padding: 5px 8px;
@@ -126,4 +120,9 @@ body {
   color: #49274b;
   background-color: white;
   border-radius: 9999px;
+}
+.info h4 {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
 }
