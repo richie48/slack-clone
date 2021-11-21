@@ -3,15 +3,10 @@ import CreateIcon from '@material-ui/icons/Create'
 
 function sideBarHeader() {
     return (
-    <div className='sidebar-header-split'>
         <div className='sidebar-header'>
-            <h3>RICHIE'S SLACK</h3>
-            <h4><FiberManualRecordIcon/> Odior Richard </h4>
+            <div><h3>Richie's Slack</h3></div>
+            <div className='name-line'><div><h4><FiberManualRecordIcon/> Odior Richard </h4></div><div className='create-icon'><CreateIcon/></div></div>
         </div>
-        <div>
-           <CreateIcon/>
-        </div>
-    </div>
     )
 }
 

@@ -110,7 +110,20 @@ body {
 
 .sidebar-header {
   margin-top: 30px;
+  margin-left: 10px;
 }
-.sidebar-header-split {
+
+.name-line {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.create-icon {
+  margin-right: 20px;
+  padding: 5px 8px;
+  font-size: 18px;
+  color: #49274b;
+  background-color: white;
+  border-radius: 9999px;
 }
