@@ -97,7 +97,7 @@ body {
 }
 
 .sidebar {
-  height: 90vh;
+  height: 93vh;
   margin-top: 7vh;
   max-width: 250px;
   background-color: #421f44;
@@ -112,6 +112,24 @@ body {
 }
 .sidebar-header-div {
   height: 10px;
+}
+.info h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-bar-options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px ;
+  cursor: pointer;
+}
+.side-bar-options:hover{
+  opacity: 0.8;
+  background-color: #340e36;
+  
 }
 .create-icon {
   margin-right: 20px;
