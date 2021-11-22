@@ -102,6 +102,16 @@ body {
   max-width: 250px;
   background-color: #421f44;
   color: white;
+  scroll-behavior: smooth;
+}
+
+.sidebar hr{
+  margin-top: 15px;
+  border: 1px solid #49274b;
+}
+.sidebar br{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .sidebar-header {
   margin-top: 30px;
@@ -122,8 +132,9 @@ body {
 .side-bar-options{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 15px ;
+  padding-left: 17px ;
+  padding: top 8px;
+  padding-bottom:10px;
   cursor: pointer;
 }
 .side-bar-options:hover{
