@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core"
+import { db } from "../firebase"
 
 const useStyles = makeStyles({
     main:
@@ -11,7 +12,14 @@ const useStyles = makeStyles({
 function SideBarOption({ title, Icon, AddChannelOption }) {
 
     const addChannel =()=>{
-        //add a room.
+        const channelName=prompt('please enter the channel name')
+
+        if (channelName){
+            db.collection('rooms').add({
+                name:channelName
+            })
+        }
+
     }
 
     const selectChannel =()=>{
