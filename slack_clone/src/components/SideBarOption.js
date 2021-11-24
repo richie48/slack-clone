@@ -1,5 +1,7 @@
 import { makeStyles } from "@material-ui/core"
 import { db } from "../firebase"
+import { addDoc, collection } from "firebase/firestore";
+// import {useCollection} from "react-firebase-hooks/firestore"
 
 const useStyles = makeStyles({
     main:
@@ -9,15 +11,24 @@ const useStyles = makeStyles({
     }
 })
 
-function SideBarOption({ title, Icon, AddChannelOption }) {
+const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
+
 
     const addChannel =()=>{
         const channelName=prompt('please enter the channel name')
-
         if (channelName){
-            db.collection('rooms').add({
+            try {
+                addDoc(collection(db,"rooms"),
+                {
                 name:channelName
-            })
+                })
+            } catch (error) {
+                console.log(error)
+            }
+            // old syntax
+            // db.collection('rooms').add({
+            //     name:channelName
+            // })
         }
 
     }
