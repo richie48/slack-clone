@@ -3,6 +3,8 @@ import { db } from "../firebase"
 import { addDoc, collection } from "firebase/firestore";
 // import {useCollection} from "react-firebase-hooks/firestore"
 
+import PropTypes from 'prop-types';
+
 const useStyles = makeStyles({
     main:
     {
@@ -40,10 +42,13 @@ const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
     
     const classes = useStyles();
     return (<>
-        <div className='side-bar-options' onClick={AddChannelOption?addChannel:selectChannel} ><Icon className={classes.main} />{title}
+        <div className='side-bar-options' onClick={AddChannelOption?addChannel:selectChannel} >
+            {!Icon?(<div><span>#</span>{title}</div>):(<div><Icon className={classes.main} /> {title}</div>)}
         </div>
     </>
     )
 }
+
+SideBarOption.propTypes = { title: PropTypes.any.isRequired}
 
 export default SideBarOption
