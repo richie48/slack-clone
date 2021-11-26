@@ -47,8 +47,9 @@ const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
     
     const classes = useStyles();
     return (<>
+    {/* 'channel-with-icon''added-channels' */}
         <div className='side-bar-options' onClick={AddChannelOption?addChannel:selectChannel} >
-            {!Icon?(<div className='added-channels'><span>#</span>&nbsp;&nbsp;{title}</div >):(<div className='channel-with-icon'><Icon className={classes.main} /> {title}</div>)}
+            {!Icon?(<div className= 'added-channels'><span>#</span>&nbsp;&nbsp;{title}</div >):(<div className='channel-with-icon'><Icon className={classes.main} /> {title}</div>)}
         </div>
     </>
     )

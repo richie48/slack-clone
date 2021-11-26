@@ -14,8 +14,21 @@ body {
   width: 100%;
 }
 
-.homepage {
-  margin-left: 250px;
+.chat {
+  margin-top: 7vh;
+  margin-left: 50px;
+  overflow-y: scroll;
+  overflow: hidden;
+  width: 90%;
+}
+
+.chat-room {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 10px;
+  border-bottom: 1px solid lightgray;
 }
 
 .header h1 {
@@ -92,14 +105,13 @@ body {
   cursor: pointer;
 }
 .app-home {
-  margin-top: 7vh;
   display: flex;
 }
 
 .sidebar {
   height: 93vh;
   margin-top: 7vh;
-  max-width: 250px;
+  width: 250px;
   background-color: #421f44;
   color: white;
   scroll-behavior: smooth;

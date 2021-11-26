@@ -31,7 +31,7 @@ const SideBar = () => {
             <SideBarOption Icon={PeopleAltIcon} title='People and user groups' /><br />
             <SideBarOption Icon={ExpandLessIcon} title='Slow less' />
             <hr />
-            <SideBarOption Icon={ExpandMoreIcon} title='Slow less' />
+            <SideBarOption Icon={ExpandMoreIcon} title='Slow more' />
             <hr />
             <SideBarOption Icon={AddIcon} AddChannelOption title='Add channel' />
             {channels?.docs.map((doc) => <SideBarOption key={doc.id} id={doc.id} title={doc.data().name} />)}

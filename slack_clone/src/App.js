@@ -14,8 +14,8 @@ function App() {
     <Router>
       <Header/>
       <SideBar/>
+      <Chat/>
         <div className=''>
-        <Chat/>
           <Routes>
             <Route exact path="/" element={<Home/>}/>
         </Routes>
