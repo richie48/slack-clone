@@ -2,6 +2,11 @@ import { makeStyles } from "@material-ui/core"
 import { db } from "../firebase"
 import { addDoc, collection } from "firebase/firestore";
 // import {useCollection} from "react-firebase-hooks/firestore"
+import  {enterRoom } from "../features/appSlice"
+
+import { useDispatch} from 'react-redux';
+
+
 
 import PropTypes from 'prop-types';
 
@@ -15,7 +20,6 @@ const useStyles = makeStyles({
 
 const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
 
-
     const addChannel =()=>{
         const channelName=prompt('please enter the channel name')
         if (channelName){
@@ -27,23 +31,24 @@ const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
             } catch (error) {
                 console.log(error)
             }
-            // old syntax
-            // db.collection('rooms').add({
-            //     name:channelName
-            // })
+            // old syntax      // db.collection('rooms').add({      //name:channelName      // })
         }
 
     }
-
-    const selectChannel =()=>{
+    const dispatch = useDispatch()
+    const selectChannel =(id)=>{
         //select a room.
+        if (id){
+            dispatch(enterRoom({
+                roomId:id}))
+        }
     }
 
     
     const classes = useStyles();
     return (<>
         <div className='side-bar-options' onClick={AddChannelOption?addChannel:selectChannel} >
-            {!Icon?(<div className='added-channels'><span>#</span>&nbsp;&nbsp;{title}</div>):(<div><Icon className={classes.main} /> {title}</div>)}
+            {!Icon?(<div className='added-channels'><span>#</span>&nbsp;&nbsp;{title}</div >):(<div className='channel-with-icon'><Icon className={classes.main} /> {title}</div>)}
         </div>
     </>
     )

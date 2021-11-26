@@ -14,6 +14,10 @@ body {
   width: 100%;
 }
 
+.homepage {
+  margin-left: 250px;
+}
+
 .header h1 {
   color: white;
   font-size: small;
@@ -88,12 +92,8 @@ body {
   cursor: pointer;
 }
 .app-home {
-  display: flex;
-  flex-direction: column;
-}
-
-.app-routes {
   margin-top: 7vh;
+  display: flex;
 }
 
 .sidebar {
@@ -149,12 +149,16 @@ body {
   background-color: white;
   border-radius: 9999px;
 }
-.info h4 {
+.info h4,
+.channel-with-icon {
   display: flex;
   align-items: center;
   font-weight: 400;
 }
 
+.added-channel {
+  margin: 20px;
+}
 .added-channels h3 {
   padding: 15 10px;
   font-weight: 800;

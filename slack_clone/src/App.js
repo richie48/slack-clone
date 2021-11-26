@@ -6,13 +6,16 @@ import Home from './components/Home'
 import Header from './components/Header'
 import SideBar from './components/SideBar'
 
+import Chat from './components/Chat'
+
 function App() {
   return (
   <div className='app-home'>
     <Router>
       <Header/>
       <SideBar/>
-        <div className='app-routes'>
+        <div className=''>
+        <Chat/>
           <Routes>
             <Route exact path="/" element={<Home/>}/>
         </Routes>
