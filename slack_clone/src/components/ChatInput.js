@@ -10,14 +10,13 @@ const ChatInput = ({channelName,channelId})=>{
 
     const sendMessage = e => {
         e.preventDefault()//So the page does not refresh when we fill the form
-        
         //this function is runing meaning its not recelving an id
         if (!channelId){
             console.log(channelId)
             return false
         }
     
-        db.collection('rooms').doc(channelId).collection('message').add({ message:
+        db.collection('rooms').doc(channelId).collection('message').addDoc({ message:
             {
                 message: input,
                 timestamp:Timestamp,

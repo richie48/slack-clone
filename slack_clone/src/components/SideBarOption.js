@@ -36,9 +36,8 @@ const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
 
     }
     
-    //
     const selectChannel = () =>{
-        //select a room.
+        //select a room.//fixed the select channel state issue
         if (id){
             dispatch(enterRoom({
                 roomId:id}))
@@ -51,12 +50,13 @@ const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
     return (<>
     {/* 'channel-with-icon''added-channels' */}
         <div className='side-bar-options' onClick={AddChannelOption?addChannel:selectChannel} >
-            {!Icon?(<div className= 'added-channels'><span>#</span>&nbsp;&nbsp;{title}</div >):(<div className='channel-with-icon'><Icon className={classes.main} /> {title}</div>)}
+            {!Icon?(<div className= 'added-channels'><span>#</span>&nbsp;&nbsp;{title.charAt(0).toUpperCase()+title.slice(1)}</div >):(<div className='channel-with-icon'><Icon className={classes.main} /> {title}</div>)}
         </div>
     </>
     )
 }
 
+//default props
 SideBarOption.propTypes = { title: PropTypes.any.isRequired}
 
 export default SideBarOption

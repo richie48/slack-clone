@@ -13,9 +13,10 @@ const useStyles=makeStyles({star:{
     fontSize:15,
 }})
 
-function Chat() {
+const Chat = () => {
 
-    const roomId = useSelector((state) => state.roomId)
+    //now correction
+    const roomId = useSelector((state) => state.app.roomId)
     console.log(roomId)
 
     // const roomId = useSelector(selectRoomId)
