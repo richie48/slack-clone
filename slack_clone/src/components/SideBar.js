@@ -19,7 +19,7 @@ import {useCollection} from "react-firebase-hooks/firestore"
 const SideBar = () => {
     const [channels,loading,error]=useCollection(collection(db,"rooms"))
 
-    // channels?.docs.map((doc)=> console.log(doc.data().name))
+    // channels?.docs.map((doc)=> console.log(doc.id))
 
     return (
         <div className='sidebar'>

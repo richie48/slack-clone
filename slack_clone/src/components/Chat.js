@@ -4,7 +4,6 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 
 import ChatMessages from "./ChatMessages"
 import ChatInput from "./ChatInput"
-import { selectRoomId} from "../features/appSlice"
 
 import { useSelector } from 'react-redux'
 
@@ -16,7 +15,9 @@ const useStyles=makeStyles({star:{
 
 function Chat() {
 
-    const roomId = useSelector((state) => state.RoomId)
+    const roomId = useSelector((state) => state.roomId)
+    console.log(roomId)
+
     // const roomId = useSelector(selectRoomId)
 
     const classes=useStyles()

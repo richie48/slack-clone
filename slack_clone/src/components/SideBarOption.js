@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 })
 
 const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
-
+    const dispatch = useDispatch()
     const addChannel =()=>{
         const channelName=prompt('please enter the channel name')
         if (channelName){
@@ -35,12 +35,14 @@ const SideBarOption = ({ title, Icon, AddChannelOption ,id }) => {
         }
 
     }
-    const dispatch = useDispatch()
-    const selectChannel =(id)=>{
+    
+    //
+    const selectChannel = () =>{
         //select a room.
         if (id){
             dispatch(enterRoom({
                 roomId:id}))
+            console.log(id)
         }
     }
 
