@@ -1,10 +1,14 @@
 import { makeStyles } from '@material-ui/core'
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined'
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 
 import ChatMessages from "./ChatMessages"
 import ChatInput from "./ChatInput"
+import { selectRoomId} from "../features/appSlice"
 
-import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
+import { useSelector } from 'react-redux'
+
+
 
 const useStyles=makeStyles({star:{
     fontSize:15,
@@ -12,7 +16,8 @@ const useStyles=makeStyles({star:{
 
 function Chat() {
 
-    const roomId = useSelector()
+    const roomId = useSelector((state) => state.RoomId)
+    // const roomId = useSelector(selectRoomId)
 
     const classes=useStyles()
     return (

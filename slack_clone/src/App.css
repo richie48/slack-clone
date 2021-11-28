@@ -20,6 +20,8 @@ body {
   overflow-y: scroll;
   overflow: hidden;
   width: 90%;
+  height: 90vh;
+  position: relative;
 }
 
 .chat-room {
@@ -174,4 +176,23 @@ body {
 .added-channels h3 {
   padding: 15 10px;
   font-weight: 800;
+}
+
+.chat-input {
+  width: 50%;
+}
+
+.chat-input input {
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  border: 1px solid gray;
+}
+
+.chat-input form {
+  display: flex;
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
 }

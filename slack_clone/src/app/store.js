@@ -4,5 +4,9 @@ import appReducer from '../features/appSlice';
 export default configureStore({
     reducer:{
         app:appReducer
-    }
+    },
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
