@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core'
 import React, {useState} from 'react'
 import {db} from '../firebase'
+import { addDoc, collection } from "firebase/firestore";
 
 import { Timestamp } from '@firebase/firestore'
 
@@ -16,12 +17,23 @@ const ChatInput = ({channelName,channelId})=>{
             return false
         }
     
-        db.collection('rooms').doc(channelId).collection('message').addDoc({ message:
-            {
-                message: input,
-                timestamp:Timestamp,
-                user:"Richie"
-            }})
+        // db.collection('rooms').doc(channelId).collection('message').addDoc({ message:
+        //     {
+        //         message: input,
+        //         timestamp:Timestamp,
+        //         user:"Richie"
+        //     }})
+        const roomcall=collection(db,"rooms",channelId)
+        console.log(roomcall)
+
+        // const roomcall=collection(db,"rooms").Doc(channelId)
+        // addDoc(collection(roomcall,'message'),{ message:
+        //     {
+        //         message: input,
+        //         timestamp:Timestamp,
+        //         user:"Richie"
+        //     }})
+
         setInput('')
         console.log('i got here')
 
