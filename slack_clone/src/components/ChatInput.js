@@ -32,7 +32,7 @@ const ChatInput = ({channelName,channelId})=>{
     return(
         <div className='chat-input'>
             <form>
-                <input value={input} onChange={e=> setInput(e.target.value)} className='' placeholder="  message room"/>
+                <input value={input} onChange={e=> setInput(e.target.value)} className='' placeholder={`  message ${channelName}`}/>
                 <Button type='submit' onClick={sendMessage}> Send</Button>
             </form>
         </div>
